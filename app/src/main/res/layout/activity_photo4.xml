@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
-            android:id="@+id/login_main"
+            android:id="@+id/loginin_4"
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:background="@mipmap/login"
@@ -37,51 +37,49 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
-        android:layout_gravity="fill_vertical"
+    <ImageView
+        android:id="@+id/photo44"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="10"
-        app:layout_constraintBottom_toTopOf="@+id/lastLine"
-        app:layout_constraintTop_toBottomOf="@+id/firstLine"
-        tools:ignore="MissingConstraints">
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/sushii"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="106dp" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
+        android:id="@+id/text1111"
+        app:layout_constraintTop_toBottomOf="@+id/photo44"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- ბრინჯი,კიტრი,ტობიკო და ავოკადო  "
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="378dp"
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/photo1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/yakitori" />
+    <TextView
+        android:id="@+id/text2222"
+        app:layout_constraintTop_toBottomOf="@+id/text1111"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- კანი კამა (კრაბის / კრაბის ჯოხი)  "
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="404dp"
+        tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/photo2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/tofu" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/text2222"
+        android:id="@+id/text3333"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="- სოიოს სოუსი,ვასაბი "
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="433dp"
+        tools:ignore="MissingConstraints" />
 
-            <ImageView
-                android:id="@+id/photo3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ramen" />
-
-            <ImageView
-                android:id="@+id/photo4"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/sushii" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_gravity="end"
@@ -94,7 +92,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/checkOutButton"
+            android:id="@+id/checkOutButton4"
             android:layout_width="90dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
@@ -104,13 +102,13 @@
             tools:ignore="MissingConstraints" />
 
         <ImageButton
-            android:id="@+id/settingButton_main"
+            android:id="@+id/settingButton_4"
             android:layout_width="90dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/settingslogo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/checkOutButton"
+            app:layout_constraintStart_toEndOf="@+id/checkOutButton4"
             tools:ignore="MissingConstraints" />
 
         <ImageButton
@@ -119,11 +117,13 @@
             android:layout_height="80dp"
             android:scaleType="centerCrop"
             android:src="@mipmap/homelogo"
-            app:layout_constraintEnd_toStartOf="@+id/checkOutButton"
+            app:layout_constraintEnd_toStartOf="@+id/checkOutButton4"
             app:layout_constraintHorizontal_bias="0.024"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

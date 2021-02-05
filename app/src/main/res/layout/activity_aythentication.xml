@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".MainActivity"
     android:orientation="vertical"
+    tools:context=".aythentication"
     android:background="@mipmap/ic_background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstLine"
-        android:paddingTop="5dp"
-        android:paddingLeft="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         android:layout_gravity="start"
         android:layout_weight="1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:background="#ADD6DD"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
         tools:ignore="MissingConstraints">
 
         <ImageButton
@@ -27,7 +27,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageButton
-            android:id="@+id/login_main"
+            android:id="@+id/loginin_aut"
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:background="@mipmap/login"
@@ -37,51 +37,30 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ScrollView
-        android:layout_gravity="fill_vertical"
+    <androidx.appcompat.widget.AppCompatButton
+        android:onClick="goToLogin"
+        android:background="@color/white"
+        android:hint="@string/log_in"
+        android:layout_marginTop="250dp"
+        android:singleLine="true"
+        android:id="@+id/loginbut"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="10"
-        app:layout_constraintBottom_toTopOf="@+id/lastLine"
-        app:layout_constraintTop_toBottomOf="@+id/firstLine"
-        tools:ignore="MissingConstraints">
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/firstLine"/>
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/photo1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/yakitori" />
-
-            <ImageView
-                android:id="@+id/photo2"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/tofu" />
-
-            <ImageView
-                android:id="@+id/photo3"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/ramen" />
-
-            <ImageView
-                android:id="@+id/photo4"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/sushii" />
-
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@color/white"
+        android:layout_marginTop="30dp"
+        android:hint="@string/sing_up"
+        android:id="@+id/SignUpButton_aut"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/loginbut"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_gravity="end"
@@ -94,7 +73,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageButton
-            android:id="@+id/checkOutButton"
+            android:id="@+id/checkOutButton_aut"
             android:layout_width="90dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
@@ -104,7 +83,8 @@
             tools:ignore="MissingConstraints" />
 
         <ImageButton
-            android:id="@+id/settingButton_main"
+
+            android:id="@+id/settingButton_aut"
             android:layout_width="90dp"
             android:layout_height="80dp"
             android:scaleType="centerCrop"
@@ -126,4 +106,5 @@
             tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

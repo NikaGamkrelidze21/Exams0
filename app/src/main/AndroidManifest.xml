@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Exams">
-        <activity
-            android:name=".BottomNavigationActivity"
-            android:label="@string/title_activity_bottom_navigation"></activity>
+        <activity android:name=".LogIn"></activity>
+        <activity android:name=".SignUp" />
+        <activity android:name=".Settings" />
+        <activity android:name=".aythentication" />
+        <activity android:name=".Basket" />
+        <activity android:name=".Photo4" />
+        <activity android:name=".Photo3" />
+        <activity android:name=".Photo2" />
+        <activity android:name=".FirstPhoto" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
